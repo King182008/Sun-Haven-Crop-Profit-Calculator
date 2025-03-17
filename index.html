@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Haven Crop Profit Per Day Calculator</title>
+</head>
+<body>
+    <h1>Profit Calculator</h1>
+
+    <button id = "addCrop">Add a Crop</button>
+
+    <table id = "table">
+
+    </table>
+
+    <script>   
+        var addCrop = document.getElementById("addCrop").addEventListener("click", "AddCrop")
+
+        function AddCrop() {
+
+            var name = prompt("What is the name of the crop?")
+            var time = prompt("How long does it take for the crop to grow?")
+            var cropYeild = prompt("how many do you get upon harvesting?")
+            var money = ("How much does the crop sell for?")
+
+            var table = document.getElementById("table")
+            var row = document.createElement("tr").appendChild(table)
+
+            var tableHead = document.createElement("th").innerHTML(name).appendChild(row)
+            var tableTime = document.createElement("td").innerHTML(time).appendChild(row)
+            var tableYeild = document.createElement("td").innerHTML(cropYeild).appendChild(row)
+            var tableMoney = document.createElement("td").innerHTML(money).appendChild(row)
+
+            
+        }
+
+    </script>
+</body>
+</html>
